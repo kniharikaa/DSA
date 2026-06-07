@@ -1,0 +1,5 @@
+# Executables and macOS debug bundles
+basic
+*.dSYM/
+*.o
+build/
