@@ -43,6 +43,7 @@ void printPrimes(int start, int end){
             cout<<i<<" ";
         }
     }
+    cout<<endl;
 }
 //fibonacci series
 void fibonacci(int n){
@@ -54,13 +55,50 @@ void fibonacci(int n){
         b=next;
     }
  }
+ //decimal to binary
+ int dectoBinary(int decnum){
+    int ans=0,pow=1;
+    while(decnum>0){
+        int rem = decnum%2;
+        decnum /=2;
+        ans+=(rem*pow);
+        pow*=10;
+    }
+    return ans;
+ }
+ //find if a number is power of 2
+    bool isPowerOfTwo(int num){
+        if(num<=0){
+            return false;
+        }
+        return (num & (num-1))==0;
+    } 
+//to reverse an integer
+int reverseInteger(int p){
+    int pow=1; int b;
+    while(p>0){
+        int a=p/10;
+        p/=10;
+        b+=(a*pow);
+        pow*=10;
+    
+    }
+    return b;
+}
+
+   
 int main(){
     int s=17;
     int n=8, r=3;
+    int num=32;
     cout<<"nCr = "<<nCr(n,r)<<endl;
     cout<<"Sum = "<<sumofDigits(2356)<<endl;
     cout<<"Is Prime = "<<isPrime(s)<<endl;
-    cout<<"Prime numbers in range: ";
-    printPrimes(1, 20);
+    cout<<"Prime numbers in range: "<<endl;
+    printPrimes(10,50);
+    cout<<"Decimal to Binary = "<<dectoBinary(42)<<endl;
+    fibonacci(10);
+    cout<<"Is Power of Two = "<<isPowerOfTwo(16)<<endl;
+    cout<<"Reverse Integer = "<<reverseInteger(12345)<<endl;
     return 0;
 }
