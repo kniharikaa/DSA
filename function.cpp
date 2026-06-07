@@ -75,17 +75,14 @@ void fibonacci(int n){
     } 
 //to reverse an integer
 int reverseInteger(int p){
-    int pow=1; int b;
+    int rev=0;
     while(p>0){
-        int a=p/10;
+        int last_dig = p%10;
+        rev = rev*10 + last_dig;
         p/=10;
-        b+=(a*pow);
-        pow*=10;
-    
     }
-    return b;
+    return rev;
 }
-
    
 int main(){
     int s=17;
