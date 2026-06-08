@@ -3,3 +3,10 @@ basic
 *.dSYM/
 *.o
 build/
+# ignore compiled executables and macOS debug bundles in Array
+MaxSubArr
+basic
+linear
+sl
+Reverse
+*.dSYM/
